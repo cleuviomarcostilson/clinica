@@ -1,0 +1,76 @@
+/* ============================================================
+   css/servicos.css
+   ============================================================ */
+
+.servicos-page-intro {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.servicos-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.servico-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.servico-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.servico-item .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.servico-item h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.servico-item .preco {
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.servico-item p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.page-cta {
+  margin-top: 2rem;
+}
+
+.page-cta-box {
+  background: linear-gradient(135deg, var(--primary) 0%, #2b8bd7 100%);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.page-cta-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.page-cta-box p {
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marcar Consulta — VisionCare Angola</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/marcacao.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo"><i class="fas fa-eye"></i><span>VisionCare</span></a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../index.html" class="nav-link">Início</a></li>
+        <li><a href="servicos.html" class="nav-link">Serviços</a></li>
+        <li><a href="produtos.html" class="nav-link">Produtos</a></li>
+        <li><a href="contactos.html" class="nav-link">Contactos</a></li>
+        <li><a href="marcacao.html" class="nav-link btn-marcar active">Marcar Consulta</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <h1><i class="fas fa-calendar-plus"></i> Marcar Consulta</h1>
+      <p>Preencha o formulário abaixo para agendar a sua consulta</p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="marcacao-main section">
+    <div class="container">
+      <div class="marcacao-layout">
+
+        <!-- FORMULÁRIO -->
+        <div class="marcacao-form-card">
+          <div class="form-header">
+            <h2>Dados da Marcação</h2>
+            <p>Todos os campos marcados com * são obrigatórios</p>
+          </div>
+
+          <form id="formMarcacao" novalidate>
+
+            <div class="form-group">
+              <label for="nome_completo">Nome Completo *</label>
+              <div class="input-wrapper">
+                <i class="fas fa-user"></i>
+                <input type="text" id="nome_completo" name="nome_completo"
+                  placeholder="Ex: Maria da Silva Lopes" required minlength="3" />
+              </div>
+              <span class="field-error" id="err-nome"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="telefone">Telefone *</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-phone"></i>
+                  <input type="tel" id="telefone" name="telefone"
+                    placeholder="+244 923 456 789" required />
+                </div>
+                <span class="field-error" id="err-telefone"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email <span class="optional">(opcional)</span></label>
+                <div class="input-wrapper">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" id="email" name="email" placeholder="email@exemplo.com" />
+                </div>
+                <span class="field-error" id="err-email"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="tipo_servico">Tipo de Serviço *</label>
+              <div class="input-wrapper">
+                <i class="fas fa-stethoscope"></i>
+                <select id="tipo_servico" name="tipo_servico" required>
+                  <option value="">Selecione o serviço...</option>
+                </select>
+              </div>
+              <span class="field-error" id="err-servico"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="data_consulta">Data da Consulta *</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-calendar"></i>
+                  <input type="text" id="data_consulta" name="data_consulta"
+                    placeholder="DD/MM/AAAA" maxlength="10" required />
+                </div>
+                <span class="field-error" id="err-data"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="hora_consulta">Hora *</label>
+                <div class="input-wrapper">
+                  <i class="fas fa-clock"></i>
+                  <select id="hora_consulta" name="hora_consulta" required>
+                    <option value="">Selecione...</option>
+                    <option>08:00</option><option>08:30</option>
+                    <option>09:00</option><option>09:30</option>
+                    <option>10:00</option><option>10:30</option>
+                    <option>11:00</option><option>11:30</option>
+                    <option>14:00</option><option>14:30</option>
+                    <option>15:00</option><option>15:30</option>
+                    <option>16:00</option><option>16:30</option>
+                  </select>
+                </div>
+                <span class="field-error" id="err-hora"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Mensagem <span class="optional">(opcional)</span></label>
+              <textarea id="mensagem" name="mensagem" placeholder="Deixe uma mensagem adicional..." rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="btnSubmit">
+              <i class="fas fa-calendar-check"></i>
+              <span>Confirmar Marcação</span>
+              <div class="btn-spinner" style="display:none;"><i class="fas fa-spinner fa-spin"></i></div>
+            </button>
+          </form>
+
+          <!-- SUCCESS MESSAGE -->
+          <div class="success-message" id="successMsg" style="display:none;">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h3>Marcação Efectuada!</h3>
+            <p>A sua consulta foi agendada com sucesso. Entraremos em contacto para confirmar.</p>
+            <button class="btn btn-primary" id="btnNovaMarcacao">Fazer Nova Marcação</button>
+          </div>
+        </div>
+
+        <!-- SIDEBAR INFO -->
+        <div class="marcacao-sidebar">
+          <div class="info-card">
+            <h3><i class="fas fa-info-circle"></i> Informações Úteis</h3>
+            <ul class="info-list">
+              <li><i class="fas fa-clock"></i> Consultas: Seg–Sex, 08h–17h</li>
+              <li><i class="fas fa-phone"></i> +244 923 456 789</li>
+              <li><i class="fas fa-map-marker-alt"></i> Rua da Missão, 45, Luanda</li>
+              <li><i class="fas fa-calendar-check"></i> Confirmação via telefone</li>
+            </ul>
+          </div>
+
+          <div class="info-card info-card-tips">
+            <h3><i class="fas fa-lightbulb"></i> Dicas</h3>
+            <ul class="tips-list">
+              <li>Chegue 10 minutos antes</li>
+              <li>Traga documentos de identidade</li>
+              <li>Se usar óculos, traga-os</li>
+              <li>Cancele com 24h de antecedência</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none; padding: 1.5rem 0;">
+        <p>&copy; 2024 VisionCare Angola. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/marcacao.js"></script>
+</body>
+</html>

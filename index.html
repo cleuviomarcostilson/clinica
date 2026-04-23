@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VisionCare Angola — Clínica Óptica</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <i class="fas fa-eye"></i>
+        <span>VisionCare</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link active">Início</a></li>
+        <li><a href="pages/servicos.html" class="nav-link">Serviços</a></li>
+        <li><a href="pages/produtos.html" class="nav-link">Produtos</a></li>
+        <li><a href="pages/contactos.html" class="nav-link">Contactos</a></li>
+        <li><a href="pages/marcacao.html" class="nav-link btn-marcar">Marcar Consulta</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ═════════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge"><i class="fas fa-shield-halved"></i> Cuidados visuais de excelência</span>
+      <h1>Cuide da sua visão<br/><span>com especialistas</span></h1>
+      <p>A melhor clínica óptica de Angola. Tecnologia avançada, profissionais dedicados e o cuidado que a sua visão merece.</p>
+      <div class="hero-btns">
+        <a href="pages/marcacao.html" class="btn btn-primary btn-lg">
+          <i class="fas fa-calendar-plus"></i> Marcar Consulta
+        </a>
+        <a href="pages/servicos.html" class="btn btn-outline btn-lg">
+          <i class="fas fa-stethoscope"></i> Nossos Serviços
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>+2000</strong><span>Pacientes</span></div>
+        <div class="stat"><strong>10+</strong><span>Anos de experiência</span></div>
+        <div class="stat"><strong>98%</strong><span>Satisfação</span></div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-card">
+        <i class="fas fa-eye"></i>
+        <p>Próxima consulta disponível</p>
+        <strong>Hoje mesmo!</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ POR QUÊ NÓS ══════════════════════════════════════════ -->
+  <section class="why-us section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nossos Diferenciais</span>
+        <h2>Por que escolher a VisionCare?</h2>
+        <p>Combinamos tecnologia moderna com atendimento humano e especializado</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-microscope"></i></div>
+          <h3>Tecnologia Avançada</h3>
+          <p>Equipamentos de última geração para diagnóstico preciso e seguro.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-user-doctor"></i></div>
+          <h3>Especialistas Certificados</h3>
+          <p>Equipa médica altamente qualificada e com vasta experiência clínica.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-clock"></i></div>
+          <h3>Atendimento Rápido</h3>
+          <p>Marcações online e atendimento ágil para respeitar o seu tempo.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-heart-pulse"></i></div>
+          <h3>Cuidado Humanizado</h3>
+          <p>Tratamento personalizado com atenção plena a cada paciente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SERVIÇOS EM DESTAQUE ══════════════════════════════════ -->
+  <section class="servicos-destaque section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">O que oferecemos</span>
+        <h2>Nossos Serviços</h2>
+        <p>Soluções completas para a saúde dos seus olhos</p>
+      </div>
+      <div class="servicos-grid" id="servicosDestaque">
+        <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i></div>
+      </div>
+      <div class="section-cta">
+        <a href="pages/servicos.html" class="btn btn-outline-primary">Ver todos os serviços <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PRODUTOS EM DESTAQUE ══════════════════════════════════ -->
+  <section class="produtos-destaque section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nossa Colecção</span>
+        <h2>Produtos em Destaque</h2>
+        <p>Armações, lentes e acessórios das melhores marcas</p>
+      </div>
+      <div class="produtos-grid" id="produtosDestaque">
+        <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i></div>
+      </div>
+      <div class="section-cta">
+        <a href="pages/produtos.html" class="btn btn-outline-primary">Ver todos os produtos <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA MARCAÇÃO ══════════════════════════════════════════ -->
+  <section class="cta-section section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-content">
+          <h2>Pronto para cuidar da sua visão?</h2>
+          <p>Marque já a sua consulta. É rápido, fácil e seguro.</p>
+          <a href="pages/marcacao.html" class="btn btn-white btn-lg">
+            <i class="fas fa-calendar-check"></i> Marcar Consulta Agora
+          </a>
+        </div>
+        <div class="cta-visual">
+          <i class="fas fa-glasses"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ DEPOIMENTOS ════════════════════════════════════════════ -->
+  <section class="depoimentos section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">O que dizem de nós</span>
+        <h2>Depoimentos de Pacientes</h2>
+      </div>
+      <div class="depoimentos-grid">
+        <div class="depoimento-card">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Atendimento excelente! A equipa foi muito atenciosa e profissional. Recomendo a todos."</p>
+          <div class="depoimento-autor">
+            <div class="autor-avatar">MN</div>
+            <div><strong>Maria Nguesso</strong><span>Luanda</span></div>
+          </div>
+        </div>
+        <div class="depoimento-card">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Fiz a marcação online e foi muito fácil. O médico explicou tudo detalhadamente. Voltarei com certeza!"</p>
+          <div class="depoimento-autor">
+            <div class="autor-avatar">JS</div>
+            <div><strong>João Silva</strong><span>Benguela</span></div>
+          </div>
+        </div>
+        <div class="depoimento-card">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i></div>
+          <p>"Equipamentos modernos e atendimento humanizado. A melhor clínica óptica que já fui em Angola."</p>
+          <div class="depoimento-autor">
+            <div class="autor-avatar">AL</div>
+            <div><strong>Ana Lopes</strong><span>Huambo</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <i class="fas fa-eye"></i><span>VisionCare</span>
+          </a>
+          <p>Clínica óptica de referência em Angola. Cuidamos da sua visão com excelência e dedicação.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="pages/servicos.html">Serviços</a></li>
+            <li><a href="pages/produtos.html">Produtos</a></li>
+            <li><a href="pages/marcacao.html">Marcações</a></li>
+            <li><a href="pages/contactos.html">Contactos</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contactos</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> +244 923 456 789</li>
+            <li><i class="fas fa-envelope"></i> info@visioncare.ao</li>
+            <li><i class="fas fa-map-marker-alt"></i> Rua da Missão, 45<br/>Luanda, Angola</li>
+            <li><i class="fas fa-clock"></i> Seg–Sex: 08h–17h</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 VisionCare Angola. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

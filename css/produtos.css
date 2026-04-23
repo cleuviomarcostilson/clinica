@@ -1,0 +1,87 @@
+/* ============================================================
+   css/produtos.css
+   ============================================================ */
+
+.produtos-filter {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.25rem;
+}
+
+.filter-input {
+  width: min(100%, 320px);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.95rem;
+}
+
+.filter-input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(26,111,196,0.12);
+}
+
+.produtos-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.produto-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.produto-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.produto-item .img {
+  height: 180px;
+  background: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 2rem;
+}
+
+.produto-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.produto-item .body {
+  padding: 1rem;
+}
+
+.produto-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.produto-item p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 0.7rem;
+}
+
+.produto-item .preco {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.no-results {
+  text-align: center;
+  color: var(--text-muted);
+  margin-top: 1.2rem;
+}

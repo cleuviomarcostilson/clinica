@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produtos — VisionCare Angola</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/produtos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo"><i class="fas fa-eye"></i><span>VisionCare</span></a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../index.html" class="nav-link">Início</a></li>
+        <li><a href="servicos.html" class="nav-link">Serviços</a></li>
+        <li><a href="produtos.html" class="nav-link active">Produtos</a></li>
+        <li><a href="contactos.html" class="nav-link">Contactos</a></li>
+        <li><a href="marcacao.html" class="nav-link btn-marcar">Marcar Consulta</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <h1><i class="fas fa-glasses"></i> Nossos Produtos</h1>
+      <p>Armações, lentes e acessórios das melhores marcas do mundo</p>
+    </div>
+  </div>
+
+  <main class="section">
+    <div class="container">
+
+      <!-- Filtro visual -->
+      <div class="produtos-filter">
+        <input type="text" id="searchProduto" placeholder="Pesquisar produto..." class="filter-input" />
+      </div>
+
+      <div class="produtos-page-grid" id="produtosLista">
+        <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i></div>
+      </div>
+
+      <p class="no-results" id="noResults" style="display:none;">
+        <i class="fas fa-search"></i> Nenhum produto encontrado para a sua pesquisa.
+      </p>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none; padding: 1.5rem 0;">
+        <p>&copy; 2024 VisionCare Angola. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/produtos.js"></script>
+</body>
+</html>

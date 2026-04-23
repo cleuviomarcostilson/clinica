@@ -1,0 +1,100 @@
+/* ============================================================
+   css/contactos.css
+   ============================================================ */
+
+.contactos-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 1.5rem;
+}
+
+.contactos-info,
+.contactos-mapa {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem;
+  box-shadow: var(--shadow);
+}
+
+.contactos-info h2,
+.contactos-mapa h2 {
+  margin-bottom: 0.6rem;
+}
+
+.contactos-desc {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.contact-cards {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.9rem;
+}
+
+.contact-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-details h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.contact-details a,
+.contact-details p {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.social-section {
+  margin-top: 1rem;
+}
+
+.social-links-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.social-btn {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.social-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.directions-cta {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .contactos-layout {
+    grid-template-columns: 1fr;
